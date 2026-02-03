@@ -24,10 +24,10 @@ from telegram.ext import (
 # =========================
 # ENV
 # =========================
-BOT_TOKEN = "8559573847:AAFEpjXHi94q9vS8UvQ1OfV2MHJCkwW2T1g"
-SPREADSHEET_ID = "19vQeKbB3jnbAFYwram8RLbeWYacI5O1rmgurjtqJ0fY"
-SHEET_NAME = "Ответы на форму (1)"
-GOOGLE_CREDS_FILE = "service_account.json"
+BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+SPREADSHEET_ID = os.getenv("SPREADSHEET_ID", "").strip()
+SHEET_NAME = os.getenv("SHEET_NAME", "Form_Responses").strip()
+GOOGLE_CREDS_JSON = os.getenv("GOOGLE_CREDS_JSON", "").strip()
 
 # =========================
 # КОЛОНКИ (0-based)
